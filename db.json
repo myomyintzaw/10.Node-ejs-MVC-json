@@ -158,6 +158,18 @@
       "username": "kuzyq",
       "email": "divy@mailinator.com",
       "password": "$2a$10$T4BRnRYyjMR8iW482sytlOKNnw5N.BY76zJv3Rsw38YG78LCavM2."
+    },
+    {
+      "id": "d40a",
+      "username": "zibox",
+      "email": "user2@gmail.com",
+      "password": "$2a$10$jfLExcob9QVpybpvTernnul8pRAmM0enElv3f7z1TeSGwua7utJtu"
+    },
+    {
+      "id": "6d6f",
+      "username": "baboruhih",
+      "email": "povenajih@mailinator.com",
+      "password": "$2a$10$765l8/U.QqJ1fBCE75foyeGKWp/VoDNHlEshMgFAQF4WoPDK/tlUS"
     }
   ],
   "customers": [

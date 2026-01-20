@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const axios = require('axios');
-const { generateToken } = require('../utils/jwt');
-// const jwt = require('jsonwebtoken');
+// const { generateToken } = require('../utils/jwt');
+const jwt = require('jsonwebtoken');
 const { response } = require('express');
 const userEndpoint = 'http://localhost:3001/users';
 
@@ -37,23 +37,33 @@ const login = async (req, res) => {
         // const existingUsers = await axios.get(userEndpoint);
         const existingUsers = await axios.get(userEndpoint);
         const user = existingUsers.data.find(u => u.email === email);
-        console.log("user =>", user)
+        // console.log("user =>", user)
         if (!user) {
             // return res.status(400).send('User not register');
-            return res.status(401).send({message:'User not register'});
+            return res.status(401).send({ message: 'User not register' });
 
         }
-        console.log("ok")
+
+        //compare password
         const validPassword = bcrypt.compareSync(password, user.password);
         if (!validPassword) {
             // return res.status(400).send('Invalid password');
-            return res.status(400).json({message:'Email And Password Do Not Match'});
+            return res.status(400).json({ message: 'Email And Password Do Not Match' });
         }
-        console.log("validPassword =>",validPassword)
-        
-        const token = generateToken(user);
+        console.log("validPassword =>", validPassword)
+
+        console.log("user =>", user)
+
+        // const token = generateToken(user, { expiresIn: "1h" });
+
+        const token = jwt.sign(
+            { id: user.id, username: user.username, email: user.email },
+            process.env.JWT_SECRET,
+            { expiresIn: "1h" }
+        );
+
         console.log(token)
-        res.send({ token });
+        res.send({ token });  //token /jwt-io
     } catch (error) {
         res.status(500).send('Error logging in');
     }
