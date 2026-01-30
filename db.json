@@ -215,6 +215,79 @@
     }
   ],
   "categories": [],
-  "products": [],
+  "products": [
+    {
+      "id": "1",
+      "title": "Sample Product",
+      "description": "This is a sample product description.",
+      "price": 29.99,
+      "stack": 100
+    },
+    {
+      "id": "2",
+      "title": "Another Product",
+      "description": "This is another product description.",
+      "price": 49.99,
+      "stack": 50
+    },
+    {
+      "id": "3",
+      "title": "Third Product",
+      "description": "This is the third product description.",
+      "price": 19.99,
+      "stack": "200",
+      "image": null
+    },
+    {
+      "id": "4",
+      "title": "Fourth Product",
+      "description": "This is the fourth product description.",
+      "price": 99.99,
+      "stack": "25",
+      "image": "Velit eveniet cillum amet excepteur excepteur excepteur excepteur excepteur."
+    },
+    {
+      "id": "640c",
+      "title": "Fifth Product",
+      "description": "This is the fifth product description.",
+      "price": 9.99,
+      "stack": "500",
+      "image": "Velit eveniet non n"
+    },
+    {
+      "id": "6193",
+      "title": "Consequatur adipisic",
+      "description": "Consequat Culpa au",
+      "price": 620,
+      "stock": "65",
+      "image": "Cillum commodo quisq"
+    },
+    {
+      "id": "910f",
+      "name": "Officia optio atque",
+      "title": "Officia optio atque",
+      "description": "Minima veritatis qui",
+      "price": 997,
+      "stock": "22",
+      "image": "Molestiae placeat e"
+    },
+    {
+      "id": "0e93",
+      "name": "Est sit cumque elit",
+      "title": "Est sit cumque elit",
+      "description": "Ut ducimus pariatur",
+      "price": 725,
+      "stock": "64",
+      "image": "Laudantium ex duis "
+    },
+    {
+      "id": "a9f5",
+      "title": "Officia explicabo S",
+      "description": "Dolorem nisi esse re",
+      "price": 2,
+      "stock": "57",
+      "image": "Ut quod sunt quia es"
+    }
+  ],
   "orders": []
 }

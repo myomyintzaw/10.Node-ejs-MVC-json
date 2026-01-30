@@ -18,6 +18,9 @@ app.use(cors()); //middleware
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/customers',customerRoutes);
+// app.use('/api/products',require('./routes/products'));
+            // process.env.JWT_SECRET,
+            // { expiresIn: '1h' }
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
